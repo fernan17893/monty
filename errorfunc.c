@@ -23,16 +23,8 @@ void error_function(int error, char *file_name, int line)
 	case 4:
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line);
 		break;
-	case 5:
-		fprintf(stderr, "L%d: can't pop an empty stack\n", line);
-		break;
-	case 6:
-		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
-		break;
-	case 7:
-		fprintf(stderr, "L%d: can't add, stack too short\n", line);
-		break;
+	default:
 
-	return;
+		return;
 	}
 }
