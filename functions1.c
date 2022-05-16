@@ -41,7 +41,7 @@ int tokenizer(char *lineptr, int line, int flag)
 
 	char *value, *opcode, *del;
 
-	del = "\n";
+	del = "\n ";
 	opcode = strtok(lineptr, del);
 	value = strtok(NULL, del);
 

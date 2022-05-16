@@ -36,6 +36,8 @@ void op_code(char *value, char *monty_opcode, int line, int flag)
 			int_value = atoi(value) * i;
 			if (flag == 0)
 				op(&head, int_value);
+			if (flag == 1)
+				op_qpush(&head, int_value);
 		}
 		else
 			op(&head, line);
