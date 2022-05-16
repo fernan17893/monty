@@ -50,5 +50,20 @@ void op_pint(stack_t **node_head, unsigned int line);
 void op_pall(stack_t **node_head, unsigned int line);
 void error_function(int error, char *file_name, int line);
 void free_dlistint(stack_t *head);
+void op_pop(stack_t **node_head, unsigned int line);
+void op_mul(stack_t **node_head, unsigned int line);
+void op_mod(stack_t **node_head, unsigned int line);
+void print_char(stack_t **node_head, unsigned int line);
+void print_string(stack_t **node_head, unsigned int line);
+void op_rotr(stack_t **node_head, unsigned int line);
+void op_swap(stack_t **node_head, unsigned int line);
+void op_add(stack_t **node_head, unsigned int line);
+void op_nop(stack_t **node_head, unsigned int line);
+void op_sub(stack_t **node_head, unsigned int line);
+void op_div(stack_t **node_head, unsigned int line);
+void op_rotate(stack_t **node_head, unsigned int line);
+void op_qpush(stack_t **node_head, unsigned int value);
+void error_function2(int error_number, int line);
+
 
 #endif

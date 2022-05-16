@@ -33,7 +33,7 @@ void read_file(FILE *file)
 * @lineptr: string pointer
 * @line: line with opcode
 * @flag: to know if stack or queue
-*
+* Return: flag
 */
 
 int tokenizer(char *lineptr, int line, int flag)

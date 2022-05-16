@@ -12,20 +12,14 @@ void op_push(stack_t **node_head, unsigned int value)
 {
 
 	stack_t *new_node;
-	stack_t *current = *node_head;
-	extern int val;
+	stack_t *current = *node_head;	
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-	{
-		val = -3;
-		exit(EXIT_FAILURE);
-	}
-
+		error_function(4, NULL, value);
 	new_node->n = value;
 	new_node->next = *node_head;
 	new_node->prev = NULL;
-
 	if (current != NULL)
 		current->prev = new_node;
 	head = new_node;
@@ -95,3 +89,27 @@ void free_dlistint(stack_t *head)
 			free(head);
 	}
 }
+
+/**
+* op_pop - deletes top node of stack
+* @node_head: head of node
+* @line: string line command
+*
+*/
+
+void op_pop(stack_t **node_head, unsigned int line)
+{
+
+	stack_t *tmp, *eraser;
+
+	tmp = *node_head;
+	if (tmp == NULL)
+		error_function(7, NULL, line);
+	eraser = *node_head;
+	*node_head = tmp->next;
+	tmp = tmp->next;
+	if (tmp != NULL)
+		tmp->prev = NULL;
+	free(eraser);
+}
+

@@ -9,7 +9,7 @@ stack_t *head=NULL;
 */
 
 
-int val = 0;
+
 int main(int argc, char **argv)
 {
 
